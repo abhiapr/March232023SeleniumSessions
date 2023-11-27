@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+	
+
+<suite name="TestNG Regression Suite" thread-count="5" 
+    parallel="tests" verbose="4">
+    
+   <test name ="Google Test"> 
+        <parameter name="browser" value="chrome" />
+                <parameter name="headless" value="true"/>
+         <parameter name="url" value="https://www.google.com" />
+        <classes>
+           <class name="MyTestPackage.GoogleTest"/>
+        </classes>   
+    </test> 
+    
+    
+     <test name="OpenCart Test">
+        <parameter name="browser" value="firefox"/>
+              <parameter name="headless" value="true"/>  
+        <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/login" />
+        <classes>
+           <class name="MyTestPackage.OpenCartTest" />
+        </classes>   
+     </test>
+     
+     
+     <test name="Orange HRM Test">
+        <parameter name="browser" value="edge"/>
+              <parameter name="headless" value="true"/>
+        <parameter name="url" value="https://www.orangehrm.com/30-day-free-trial/" />
+        <classes>
+           <class name="MyTestPackage.OrangeHRMTest" />
+        </classes>   
+     </test> 
+     
+     
+      <test name="Search Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="true"/>
+        <parameter name="url" value="https://naveenautomationlabs.com/opencart/index.php?route=account/login" />
+        <classes>
+           <class name="MyTestPackage.SearchTest" />
+        </classes>   
+     </test>
+ 
+    
+</suite>  
+    
+     <!--<test name ="Google Test_firefox"> 
+        <parameter name="browser" value="firefox" />
+        <classes>
+           <class name="MyTestPackage.GoogleTest"/>
+        </classes>   
+    </test>
+     <test name ="Google Test_Edge"> 
+        <parameter name="browser" value="Edge" />
+        <classes>
+           <class name="MyTestPackage.GoogleTest"/>
+        </classes>   
+    </test>
+  -->      
+  
